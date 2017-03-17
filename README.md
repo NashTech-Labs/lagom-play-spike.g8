@@ -24,7 +24,7 @@ Clone Project
 
 Steps to Install and Run Zookeeper and Kafka on your system:
 
-    1. Download kafka_2.11-0.10.0.1 From <a href="https://kafka.apache.org/downloads">here</a>
+    1. Download kafka_2.11-0.10.0.1 From https://kafka.apache.org/downloads
 
     2. Extract downloaded file
 
@@ -43,9 +43,8 @@ cd kafka_2.11-0.10.0.1
 
 Steps to Install and Run Cassandra on your system:
 
-    1. Download Cassandra from <a href="http://cassandra.apache.org/download/">here</a>
-
-
+    1. [Download Cassandra from](http://cassandra.apache.org/download/)
+    
     2: Extract downloaded file
 
         tar -xzvf apache-cassandra-3.0.10-bin.tar.gz
