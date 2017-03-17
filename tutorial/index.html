@@ -1,0 +1,79 @@
+<body>
+<div>
+    <h2>Lagom Framework + Play Framework</h2>
+</div>
+<div>
+    This is a Scala Sbt activator project that demonstrates the legacy word count example using the Lagom Framework integrated with play where we are hitting our lagom rest services via Play.
+    This is a microservice based Kafka Producer/Consumer application where one is the producer which produces data in Kafka and persist events in Cassandra Db. The other service consumes data from Kafka and gives the word count of the words.
+    The play integration provides us a way to call our lagom services via a user interface which was not provided before.</br>
+    # Prerequisites
+
+    Scala 2.11.8
+    Sbt 0.13.13
+
+</div>
+
+
+<div>
+    <h2>Clone Project</h2>
+    <pre><code>
+        <b>1:</b>git clone gihub-url<br/>
+        <b>2:</b>cd app-name<br/>
+        <b>3:</b>sbt clean compile<br/>
+    </code></pre>
+</div>
+
+<div>
+    <h2>Steps to Install and Run Zookeeper and Kafka on your system:</h2>
+    <b>1:</b> Download kafka_2.11-0.10.0.1 from <a href="https://kafka.apache.org/downloads">here</a><br/>
+    <b>2:</b> Extract downloaded file<br/>
+    <pre><code>
+        tar -xzvf kafka_2.11-0.10.0.1.tgz
+        cd kafka_2.11-0.10.0.1
+    </code></pre>
+
+    <b>3:</b> Start Servers<br/>
+    Start Zookeeper:<br/>
+
+    <pre><code>
+        bin/zookeeper-server-start.sh config/zookeeper.properties
+    </code></pre>
+
+    Start Kafka server:
+    <pre><code>
+        bin/kafka-server-start.sh config/server.properties
+    </code></pre>
+</div>
+
+<div>
+    <h2>Steps to Install and Run Cassandra on your system:</h2>
+    <b>1:</b> Download Cassandra from <a href="http://cassandra.apache.org/download/">here</a><br/>
+
+    <b>2:</b> Extract downloaded file<br/>
+    <pre><code>
+        tar -xzvf apache-cassandra-3.0.10-bin.tar.gz
+        cd apache-cassandra-3.0.10/bin
+    </code></pre>
+
+    <b>3:</b>Start Cassandra server:<br/>
+    <pre><code>
+        ./cassandra
+    </code></pre>
+</div>
+
+<div>
+
+    <h2>Command to start all services:</h2>
+
+    sbt runAll
+
+    The play routes which are used to hit the lagom rest services are :
+
+    localhost:9000/			        localhost:9000/api/hello/:id
+    localhost:9000/change		    	localhost:9000/api/hello/:id with body as : {"message":"new-welcome-message"}
+    localhost:9000/wordCount		localhost:9000/api/wordcount
+    localhost:9000/latest			localhost:9000/api/latest
+
+    For any issue please raise a ticket @ <a href="github-url/issues">Github Issue</a>
+</div>
+</body>

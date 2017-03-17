@@ -1,0 +1,13 @@
+
+GET         /                          controllers.Main.index
+GET         /hello                     controllers.HelloController.sayHello()
+GET         /change                    controllers.Main.show()
+POST        /changedMessage            controllers.HelloController.changeMessage()
+GET         /wordCount                 controllers.HelloController.wordCount()
+GET         /latest                    controllers.HelloController.latestMessage()
+GET         /assets/*file              controllers.Assets.at(path = "/public", file)
+
+
+
+
+

@@ -1,0 +1,15 @@
+@(helloForm:Form[HelloForm])(implicit messages:Messages)
+@main("Show") {
+<div class="modal-body">
+    @foundationForm(helloForm, routes.HelloController.changeMessage()) {
+    @helper.inputText(helloForm("name"),  'placeholder -> "NAME",'id -> "id" )
+    @helper.inputText(helloForm("message"),  'placeholder -> "MESSAGE",'id -> "id" )
+
+    <center>
+        <input class="button success" type="submit" value="Submit"/>
+    </center>
+    }
+
+</div>
+
+}
