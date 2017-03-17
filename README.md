@@ -62,7 +62,9 @@ Steps to Install and Run Cassandra on your system:
 
 The play routes which are used to hit the lagom rest services are :
 
-localhost:9000/			        localhost:9000/api/hello/:id
-localhost:9000/change		    localhost:9000/api/hello/:id with body as : {"message":"new-welcome-message"}
-localhost:9000/wordCount		localhost:9000/api/wordcount
-localhost:9000/latest			localhost:9000/api/latest
+|play routes:                      |                 lagom routes                                                    |
+-----------------------------------|---------------------------------------------------------------------------------|
+|localhost:9000/			       |    localhost:9000/api/hello/:id                                                 | 
+|localhost:9000/change		       |    localhost:9000/api/hello/:id with body as {"message":"new-welcome-message"}  |
+|localhost:9000/wordCount	       |    localhost:9000/api/wordcount                                                 |
+|localhost:9000/latest		       |    localhost:9000/api/latest                                                    |     
