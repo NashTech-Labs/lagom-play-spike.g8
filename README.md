@@ -15,9 +15,9 @@ Prerequisites
 
 Clone Project
 
-    1. git clone github-url
+    1. git clone git@github.com:knoldus/lagom-play-spike.git
 
-    2. cd app-name
+    2. cd lagom-play-spike
 
     3. sbt clean compile
 
