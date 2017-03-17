@@ -43,7 +43,7 @@ cd kafka_2.11-0.10.0.1
 
 Steps to Install and Run Cassandra on your system:
 
-    1. [Download Cassandra from](http://cassandra.apache.org/download/)
+    1. * [Download Cassandra from](http://cassandra.apache.org/download/)
     
     2: Extract downloaded file
 
