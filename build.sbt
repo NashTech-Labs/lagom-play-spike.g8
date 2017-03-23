@@ -70,7 +70,7 @@ lazy val `consumer-impl` = (project in file("consumer-impl"))
     )
   )
   .settings(lagomForkedTestSettings: _*)
-  .dependsOn(`consumer-api`, `producer-api`, `producer-impl`)
+  .dependsOn(`consumer-api`, `producer-api`)
 
 
 lazy val webGateway = (project in file("web-gateway"))
@@ -100,12 +100,4 @@ coverageExcludedPackages in `producer-impl` :=
 """sample.helloworld.impl.HelloLoader""".stripMargin
 // End => scoverage excluded files configuration according to projects
 
-/**
-  * Uncomment the below lines if want to use external cassandra and kafka
-  */
-/*
-lagomCassandraEnabled in ThisBuild := false
-lagomUnmanagedServices in ThisBuild := Map("cas_native" -> "http://localhost:9042")
-lagomKafkaEnabled in ThisBuild := false
-lagomKafkaAddress in ThisBuild := "localhost:9092"
-*/
+
