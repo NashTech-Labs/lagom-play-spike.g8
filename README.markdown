@@ -19,7 +19,7 @@ The play integration provides us a way to call our lagom services via a user int
 
 ###Clone Project
 
-    1. git clone git@github.com:knoldus/lagom-play-spike.git
+    1. git clone git@github.com:knoldus/lagom-play-spike.g8.git
 
     2. cd lagom-play-spike
 
